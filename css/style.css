@@ -348,7 +348,57 @@ img {
 }
 
 /* ============================= Why Choose Section ======================================= */
+.whyChoose__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
+.whyChoose__card {
+    display: flex;
+    gap: 24px;
+}
+
+.whyChoose__card2 {
+    margin: 0 auto;
+    width: 573px;
+    height: 284px;
+    flex-shrink: 0;
+}
+
+.whychoose__data {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid rgba(251, 181, 99, 0.20);
+    background: rgba(251, 181, 99, 0.05);
+}
+
+.whychoose__data:nth-child(2) {
+    border: 1px solid rgba(41, 206, 246, 0.20);
+    background: rgba(41, 206, 246, 0.05);
+}
+
+.whyChoose__img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 32px;
+}
+
+.whyChoose__title {
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-extra-bold);
+    margin-bottom: 16px;
+}
+
+.whyChoose__descripiton {
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+    line-height: 26px;
+}
 
 /* ============================= Pakege Section ========================================== */
 
