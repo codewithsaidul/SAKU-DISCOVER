@@ -331,6 +331,11 @@ img {
 
 
 /* ========================= Media query for Medium Large Device ============================ */
+@media screen and (max-width: 1180px) {
+    .popular__data {
+        flex-basis: 50%;
+    }
+}
 @media screen and (max-width: 1080px) {
     .container {
         margin-inline: 8rem;
@@ -338,6 +343,18 @@ img {
 
     .banner__form {
         width: 750px;
+    }
+
+    .popular__container {
+        align-items: center;
+    }
+
+    .popular__data {
+        flex-basis: 55%;
+    }
+
+    .popular__img {
+        flex-basis: 40%;
     }
 }
 
@@ -400,6 +417,18 @@ img {
         width: 650px;
         /* flex-direction: column; */
     }
+
+    .popular__container {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .popular__data,
+    .popular__img {
+        flex-basis: 100%;
+    }
+
 }
 
 
@@ -462,7 +491,7 @@ img {
     }
 
     .nav__logo {
-        font-size: 20px;
+        font-size: 22px;
     }
 
 
