@@ -404,6 +404,88 @@ img {
 
 
 /* ============================= Newsletter Section ======================================== */
+.newsletter__container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.newsletter__content {
+    flex-basis: 50%;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #FF5400;
+    background-color: var(--body-color);
+}
+
+.newsletter__title {
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-extra-bold);
+    margin-bottom: 16px;
+}
+
+.newsletter__description {
+    color: #5A5A5D;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+    margin-bottom: 24px;
+}
+
+.newsletter__form {
+    border-top: 1px solid rgba(19, 19, 24, 0.10);
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.newsletter__form input {
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(19, 19, 24, 0.05);
+    border: none;
+    outline: none;
+    color: rgba(19, 19, 24, 0.30);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+}
+
+.newsletter__form .subscribe__btn {
+    background-color: var(--primary-color);
+    color: var(--body-color);
+    font-size: 20px;
+    font-weight: var(--font-extra-bold);
+}
+
+.newsletter__img {
+    flex-basis: 60%;
+    position: relative;
+}
+
+.newsletter__discount {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+    position: absolute;
+    right: 10px;
+    bottom: 140px;
+    transform: rotate(-20deg);
+}
+
+.newsletter__link {
+    color: var(--body-color);
+    font-size: 1.5rem;
+    font-weight: var(--font-regular);
+    margin-bottom: 5px;
+}
+
+.newsletter__discount h4 {
+    color: var(--body-color);
+    font-size: 2rem;
+    font-weight: var(--font-extra-bold);
+}
 
 
 /* ============================= Footer Section ========================================= */
@@ -512,6 +594,18 @@ img {
         flex-basis: 100%;
     }
 
+    .newsletter__container {
+        flex-direction: column;
+    }
+
+    .newsletter__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    
+
 }
 
 
@@ -563,6 +657,23 @@ img {
         width: 100%;
         margin: 0;
     }
+
+    .newsletter__form {
+        display: flex;
+    }
+
+
+    .newsletter__discount {
+        text-align: center;
+        padding: 20px;
+        background-color: var(--primary-color);
+        border-radius: 16px;
+        position: absolute;
+        right: 10px;
+        bottom: 140px;
+        transform: rotate(-20deg);
+    }
+
 }
 
 /* ========================= Media query for Smallest Device ============================ */
