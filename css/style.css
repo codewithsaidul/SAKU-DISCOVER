@@ -1,5 +1,5 @@
 /* ================================ Google Font ======================================= */
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Mulish:wght@400;600;700;800&display=swap');
 
 
 /* =============================== Variable of CSS ===================================== */
@@ -489,9 +489,84 @@ img {
 
 
 /* ============================= Footer Section ========================================= */
+.footer {
+    margin-top: 100px;
+    background: rgba(19, 19, 24, 0.05);
+    text-align: center;
+    padding: 110px 30px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__content {
+    border-bottom: 1px solid rgba(19, 19, 24, 0.10);
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 36px;
+    font-weight: var(--font-extra-bold);
+    text-transform: uppercase;
+    color: var(--title-color);
+    margin-bottom: 15px;
+}
+
+.footer__logo img {
+    width: 64px;
+    height: 64px;
+}
+
+.footer__logo span {
+    color: var(--primary-color);
+}
+
+.footer__description {
+    width: 769px;
+    color: #5A5A5D;
+    margin: 0 auto 32px;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+    line-height: 26px;
+}
+
+.footer__social {
+    display: inline-flex;
+    gap: 24px;
+}
+
+.footer__links {
+    font-size: 20px;
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    padding: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px 100px 150px 200px;
+    transition: background-color 1s ease-in-out;
+}
+
+.footer__links:hover {
+    background-color: var(--primary-color);
+    /* border: transparent; */
+    color: var(--body-color);
+    transition: 1s ease-in-out;
+}
 
 
-
+.footer__copy {
+    color: #5A5A5D;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+    font-family: 'Inter', sans-serif;
+    line-height: 26px;
+}
 
 
 /* ========================= Media query for Medium Large Device ============================ */
@@ -604,6 +679,11 @@ img {
         gap: 30px;
     }
 
+
+    .footer__description {
+        width: 100%;
+        margin: 0 0 32px;
+    }
     
 
 }
@@ -712,6 +792,15 @@ img {
     .newsletter__discount {
         position: static;
         transform: rotate(0deg);
+    }
+
+    .footer__logo {
+        font-size: 2rem;
+    }
+
+    .footer__logo img {
+        width: 40px;
+        height: 40px;
     }
 
 }
