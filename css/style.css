@@ -470,7 +470,7 @@ img {
     border-radius: 16px;
     position: absolute;
     right: 10px;
-    bottom: 140px;
+    bottom: 50px;
     transform: rotate(-20deg);
 }
 
@@ -664,14 +664,8 @@ img {
 
 
     .newsletter__discount {
-        text-align: center;
-        padding: 20px;
-        background-color: var(--primary-color);
-        border-radius: 16px;
-        position: absolute;
-        right: 10px;
-        bottom: 140px;
-        transform: rotate(-20deg);
+        right: 20px;
+        bottom: 50px;
     }
 
 }
@@ -692,6 +686,10 @@ img {
         width: 300px;
     }
 
+    .newsletter {
+        margin-top: 150px;
+    }
+
 
 }
 
@@ -709,6 +707,11 @@ img {
     .nav__logo img {
         width: 30px;
         height: 30px;
+    }
+
+    .newsletter__discount {
+        position: static;
+        transform: rotate(0deg);
     }
 
 }
