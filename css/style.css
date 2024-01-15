@@ -101,7 +101,9 @@ img {
     font-size: var(--normal-font-size);
     font-weight: var(--font-regular);
     line-height: 26px;
-    margin-bottom: 48px;
+    text-align: center;
+    width: 643px;
+    margin: 0 auto 48px;
 }
 
 /* ============================= Header Section ==================================== */
@@ -297,6 +299,7 @@ img {
     text-align: left;
     margin-bottom: 24px;
     text-transform: capitalize;
+    width: 100%;
 }
 
 .popular__list {
@@ -313,7 +316,36 @@ img {
 }
 
 /* ============================= Destination Section ======================================= */
+.destination__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
+.destination__card {
+    display: flex;
+    gap: 24px;
+}
+
+.destination__card-img {
+    position: relative;
+}
+
+.destination__card-img img {
+    border-radius: 16px;
+    background: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%), lightgray 50%;
+}
+
+.destination__title {
+    color: var(--body-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-transform: capitalize;
+    transform: translate(-50%, -50%);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-extra-bold);
+}
 
 /* ============================= Why Choose Section ======================================= */
 
@@ -336,6 +368,7 @@ img {
         flex-basis: 50%;
     }
 }
+
 @media screen and (max-width: 1080px) {
     .container {
         margin-inline: 8rem;
