@@ -26,6 +26,33 @@
     --font-semi-bold: 600;
     --font-bold: 700;
     --font-extra-bold: 800;
+
+    /* ============ Responsive Font-Size ============== */
+    @media screen and (max-width: 991px) {
+        --biggest-font-size: 3rem;
+        --h1-font-size: 2rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+    }
+
+    @media screen and (max-width: 690px) {
+        --biggest-font-size: 2.5rem;
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1rem;
+        --normal-font-size: .98rem;
+    }
+
+    @media screen and (max-width: 420px) {
+        --biggest-font-size: 2rem;
+        --h1-font-size: 1.25rem;
+        --h2-font-size: 1.15rem;
+        --h3-font-size: .95rem;
+        --normal-font-size: .90rem;
+    }
+
+
 }
 
 /* ============================ Base of CSS ============================ */
@@ -77,7 +104,7 @@ img {
 
 /* ============================= Header Section ==================================== */
 .header {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -179,9 +206,7 @@ img {
 }
 
 /* ============================= Banner Section ========================================== */
-.banner {
-    padding-top: 50px;
-}
+
 
 .banner__container {
     border-radius: 16px;
@@ -236,6 +261,7 @@ img {
 
 .banner__form select option {
     padding: 15px 12px;
+    color: var(--title-color);
 }
 
 .banner__form .search__btn {
@@ -269,35 +295,21 @@ img {
 
 
 
-/* ========================= Media query for Medium Device ============================ */
-@media screen and (max-width: 767px) {
+/* ========================= Media query for Medium Large Device ============================ */
+@media screen and (max-width: 1080px) {
     .container {
-        margin-inline: 1rem;
+        margin-inline: 8rem;
     }
 
-    .nav__logo {
-        font-size: 24px;
-    }
-
-    .nav__logo img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .nav__list {
-        column-gap: 20px;
+    .banner__form {
+        width: 750px;
     }
 }
 
-/* ========================= Media query for Smallest Device ============================ */
-@media screen and (max-width: 690px) {
+/* ========================= Media query for Medium Device ============================ */
+@media screen and (max-width: 991px) {
     .container {
-        margin-inline: 1rem;
-    }
-
-
-    .nav__logo {
-        font-size: 28px;
+        margin-inline: 3rem;
     }
 
     .nav__toggler {
@@ -347,6 +359,61 @@ img {
         transform: rotate(-45deg);
         transition: 1s;
     }
+
+
+    .banner__form {
+        width: 650px;
+        /* flex-direction: column; */
+    }
+}
+
+
+/* ========================= Media query for Small Medium Device ============================ */
+@media screen and (max-width: 780px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .nav__logo {
+        font-size: 24px;
+    }
+
+    .nav__logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav__list {
+        column-gap: 20px;
+    }
+
+    .banner__description {
+        width: 100%;
+    }
+
+    .banner__form {
+        flex-direction: column;
+        width: 600px;
+    }
+}
+
+/* ========================= Media query for Smallest Device ============================ */
+@media screen and (max-width: 690px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+
+    .nav__logo {
+        font-size: 28px;
+    }
+
+    .banner__form {
+        flex-direction: column;
+        width: 300px;
+    }
+
+
 }
 
 
@@ -364,4 +431,5 @@ img {
         width: 30px;
         height: 30px;
     }
+
 }
