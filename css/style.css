@@ -8,8 +8,9 @@
     /* ============= Variable for Color =============== */
     --primary-color: #FF5400;
     --title-color: #131318;
-    --text-color: #131318B2; /* RGB Color for Text-color : rgba(19, 19, 24, 0.7) */
-    --body-color: #FFFFFF
+    --text-color: #131318B2;
+    /* RGB Color for Text-color : rgba(19, 19, 24, 0.7) */
+    --body-color: #FFFFFF;
 
 
     /* ============= Font & Typography =============== */
@@ -81,6 +82,7 @@ img {
     width: 100%;
     z-index: 1;
 }
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -177,7 +179,74 @@ img {
 }
 
 /* ============================= Banner Section ========================================== */
+.banner {
+    padding-top: 50px;
+}
 
+.banner__container {
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url('../images/bannerBG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.banner__title {
+    color: var(--body-color);
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-extra-bold);
+    margin-bottom: 24px;
+}
+
+.banner__description {
+    width: 676px;
+    margin: 0 auto 70px;
+    color: var(--body-color);
+    font-size: var(--normal-font-size);
+}
+
+.banner__form {
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.banner__form input,
+.banner__form select,
+.banner__form button {
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    background: #FFF;
+    border: transparent;
+    outline: none;
+    color: rgba(19, 19, 24, 0.50);
+    font-size: 16px;
+    font-weight: var(--font-regular);
+}
+
+
+.banner__form select option {
+    padding: 15px 12px;
+}
+
+.banner__form .search__btn {
+    background-color: var(--primary-color);
+    color: var(--body-color);
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-bold);
+}
 
 /* ============================= Popular Section ========================================== */
 
@@ -199,6 +268,26 @@ img {
 
 
 
+
+/* ========================= Media query for Medium Device ============================ */
+@media screen and (max-width: 767px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .nav__logo {
+        font-size: 24px;
+    }
+
+    .nav__logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav__list {
+        column-gap: 20px;
+    }
+}
 
 /* ========================= Media query for Smallest Device ============================ */
 @media screen and (max-width: 690px) {
@@ -235,25 +324,25 @@ img {
         row-gap: 2rem;
     }
 
-    #nav-check:checked ~ .nav__menu {
+    #nav-check:checked~.nav__menu {
         left: 50%;
         transform: translateX(-50%);
         transition: 1s;
     }
 
-    #nav-check:checked ~ .nav__toggler span {
+    #nav-check:checked~.nav__toggler span {
         background-color: transparent;
         /* transition: 10s; */
     }
 
-    #nav-check:checked ~ .nav__toggler span::before {
+    #nav-check:checked~.nav__toggler span::before {
         top: 0;
         transform: rotate(45deg);
         transition: 1s;
     }
 
 
-    #nav-check:checked ~ .nav__toggler span::after {
+    #nav-check:checked~.nav__toggler span::after {
         top: 0;
         transform: rotate(-45deg);
         transition: 1s;
@@ -261,7 +350,7 @@ img {
 }
 
 
-@media screen and (max-width: 420px)  {
+@media screen and (max-width: 420px) {
     .container {
         margin-inline: .5rem;
     }
@@ -276,5 +365,3 @@ img {
         height: 30px;
     }
 }
-
-
