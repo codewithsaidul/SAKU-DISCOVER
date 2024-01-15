@@ -54,7 +54,6 @@ img {
 /* ========================= Reusable CSS Classes ============================= */
 .container {
     margin-inline: 8.5rem;
-    margin: 0 auto;
 }
 
 .section {
@@ -76,8 +75,106 @@ img {
 }
 
 /* ============================= Header Section ==================================== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
 
+.nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
+.nav__logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav__logo {
+    font-size: 36px;
+    font-weight: var(--font-extra-bold);
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.nav__logo span {
+    color: var(--primary-color);
+}
+
+.nav__list {
+    display: inline-flex;
+    column-gap: 50px;
+}
+
+.nav__link {
+    color: #424247;
+    font-size: 18px;
+    font-weight: var(--font-regular);
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: color .5s ease-in;
+}
+
+.active {
+    color: var(--primary-color);
+    font-weight: var(--font-bold);
+}
+
+.nav__link:hover {
+    color: var(--primary-color);
+}
+
+#nav-check {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav__toggler {
+    width: 40px;
+    height: 40px;
+    /* background-color: var(--primary-color);
+    border-radius: 5px; */
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__toggler span {
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: var(--text-color);
+    position: relative;
+}
+
+.nav__toggler span::before,
+.nav__toggler span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-color);
+    left: 0;
+}
+
+.nav__toggler span::before {
+    top: -6px;
+}
+
+.nav__toggler span::after {
+    top: 6px;
+}
 
 /* ============================= Banner Section ========================================== */
 
@@ -98,5 +195,86 @@ img {
 
 
 /* ============================= Footer Section ========================================= */
+
+
+
+
+
+/* ========================= Media query for Smallest Device ============================ */
+@media screen and (max-width: 690px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+
+    .nav__logo {
+        font-size: 28px;
+    }
+
+    .nav__toggler {
+        display: flex;
+        /* margin-right: 30px; */
+        transition: 1s;
+    }
+
+    .nav__menu {
+        position: absolute;
+        left: -100%;
+        top: 7rem;
+        width: 70%;
+        background-color: #fff;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        padding: 30px;
+        transition: 1s;
+        border-radius: 10px;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    #nav-check:checked ~ .nav__menu {
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 1s;
+    }
+
+    #nav-check:checked ~ .nav__toggler span {
+        background-color: transparent;
+        /* transition: 10s; */
+    }
+
+    #nav-check:checked ~ .nav__toggler span::before {
+        top: 0;
+        transform: rotate(45deg);
+        transition: 1s;
+    }
+
+
+    #nav-check:checked ~ .nav__toggler span::after {
+        top: 0;
+        transform: rotate(-45deg);
+        transition: 1s;
+    }
+}
+
+
+@media screen and (max-width: 420px)  {
+    .container {
+        margin-inline: .5rem;
+    }
+
+    .nav__logo {
+        font-size: 20px;
+    }
+
+
+    .nav__logo img {
+        width: 30px;
+        height: 30px;
+    }
+}
 
 
