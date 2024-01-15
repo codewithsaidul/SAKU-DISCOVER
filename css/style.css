@@ -93,6 +93,7 @@ img {
     font-size: var(--h1-font-size);
     font-weight: var(--font-extra-bold);
     text-align: center;
+    margin-bottom: 24px;
 }
 
 .section__description {
@@ -100,6 +101,7 @@ img {
     font-size: var(--normal-font-size);
     font-weight: var(--font-regular);
     line-height: 26px;
+    margin-bottom: 48px;
 }
 
 /* ============================= Header Section ==================================== */
@@ -275,7 +277,40 @@ img {
 }
 
 /* ============================= Popular Section ========================================== */
+.popular__container {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 50px;
+}
 
+
+.popular__data {
+    flex-basis: 45%;
+}
+
+
+.popular__data .section__title {
+    text-align: left;
+}
+
+.popular__data .section__description {
+    text-align: left;
+    margin-bottom: 24px;
+    text-transform: capitalize;
+}
+
+.popular__list {
+    padding: 10px 20px;
+}
+
+.popular__list li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+    line-height: 26px;
+}
 
 /* ============================= Destination Section ======================================= */
 
@@ -372,6 +407,10 @@ img {
 @media screen and (max-width: 780px) {
     .container {
         margin-inline: 1rem;
+    }
+
+    .section {
+        margin-top: 50px;
     }
 
     .nav__logo {
