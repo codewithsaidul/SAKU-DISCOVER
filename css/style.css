@@ -125,6 +125,12 @@ img {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 36px;
+    font-weight: var(--font-extra-bold);
+    color: var(--title-color);
+    text-transform: uppercase;
+    cursor: pointer;
+
 }
 
 .nav__logo img {
@@ -132,12 +138,6 @@ img {
     height: 50px;
 }
 
-.nav__logo {
-    font-size: 36px;
-    font-weight: var(--font-extra-bold);
-    color: var(--title-color);
-    cursor: pointer;
-}
 
 .nav__logo span {
     color: var(--primary-color);
@@ -476,7 +476,7 @@ img {
 
 .newsletter__link {
     color: var(--body-color);
-    font-size: 1.5rem;
+    font-size: var(--h3-font-size);
     font-weight: var(--font-regular);
     margin-bottom: 5px;
 }
@@ -748,6 +748,10 @@ img {
         bottom: 50px;
     }
 
+
+    .newsletter__discount h4 {
+        font-size: 1.5rem;
+    }
 }
 
 /* ========================= Media query for Smallest Device ============================ */
@@ -771,6 +775,10 @@ img {
     }
 
 
+    .newsletter__discount h4 {
+        font-size: 1.25rem;
+    }
+
 }
 
 
@@ -789,10 +797,7 @@ img {
         height: 30px;
     }
 
-    .newsletter__discount {
-        position: static;
-        transform: rotate(0deg);
-    }
+
 
     .footer__logo {
         font-size: 2rem;
@@ -803,4 +808,23 @@ img {
         height: 40px;
     }
 
+    .newsletter__discount h4 {
+        font-size: 1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 320px) {
+    .footer__logo {
+        font-size: 1.5rem;
+    }
+
+    .footer__description {
+        font-size: 12px;
+    }
+
+    .footer__social {
+        gap: 20px;
+    }
 }
