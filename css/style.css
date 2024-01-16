@@ -424,7 +424,7 @@ img {
 
 
 .blog__card:hover .blog__img {
-    transform: translateY(-3rem) scale(1);
+    transform: translateY(-2.5rem) scale(1);
     transition: .5s ease-in-out;
 }
 .blog__img {
@@ -745,6 +745,10 @@ img {
         flex-basis: 100%;
     }
 
+    .blog__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .newsletter__container {
         flex-direction: column;
     }
@@ -828,6 +832,8 @@ img {
     .newsletter__discount h4 {
         font-size: 1.5rem;
     }
+
+
 }
 
 /* ========================= Media query for Smallest Device ============================ */
@@ -836,6 +842,14 @@ img {
         margin-inline: 1rem;
     }
 
+
+    .section {
+        margin-top: 100px;
+    }
+
+    .nav {
+        padding: 25px 0;
+    }
 
     .nav__logo {
         font-size: 28px;
@@ -846,10 +860,13 @@ img {
         width: 300px;
     }
 
-    .newsletter {
-        margin-top: 150px;
+    .blog__container {
+        grid-template-columns: repeat(1, 1fr);
     }
 
+    .blog__data {
+        padding-left: 15px;
+    }
 
     .newsletter__discount h4 {
         font-size: 1.25rem;
