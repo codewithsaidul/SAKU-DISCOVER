@@ -534,6 +534,7 @@ img {
     font-weight: var(--font-extra-bold);
 }
 
+
 .newsletter__img {
     flex-basis: 60%;
     position: relative;
@@ -747,6 +748,7 @@ img {
 
     .blog__container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 50px 24px;
     }
 
     .newsletter__container {
@@ -862,6 +864,7 @@ img {
 
     .blog__container {
         grid-template-columns: repeat(1, 1fr);
+        gap: 80px;
     }
 
     .blog__data {
