@@ -96,6 +96,14 @@ img {
     margin-bottom: 24px;
 }
 
+.section__subtitle {
+    color: var(--primary-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
 .section__description {
     color: var(--text-color);
     font-size: var(--normal-font-size);
@@ -400,8 +408,76 @@ img {
     line-height: 26px;
 }
 
-/* ============================= Pakege Section ========================================== */
+/* ============================= Blog Section ========================================== */
+.blog__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
 
+.blog__card {
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    transition: .5s ease-in-out;
+}
+
+
+.blog__card:hover .blog__img {
+    transform: translateY(-3rem) scale(1);
+    transition: .5s ease-in-out;
+}
+.blog__img {
+    transition: .5s ease-in-out;
+    transform: scale(.95);
+}
+.blog__img img {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.blog__date {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: var(--font-regular);
+    margin-bottom: 1rem;
+}
+
+.blog__title {
+    color: var(--primary-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.blog__description {
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+    line-height: 26px;
+    margin-bottom: 1rem;
+}
+
+.blog__btn {
+    font-size: var(--normal-font-size);
+    color: var(--primary-color);
+    font-weight: var(--font-semi-bold);
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.blog__btn i {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-extra-bold);
+    transition: .5s ease-in-out;
+}
+
+.blog__btn:hover.blog__btn i {
+    transform: translateX(8px);
+}
 
 /* ============================= Newsletter Section ======================================== */
 .newsletter__container {
